@@ -15,5 +15,4 @@
  video_metadata     | video_metadata_pk                     | CREATE UNIQUE INDEX video_metadata_pk ON public.video_metadata USING btree (index)
  video_tags         | video_tags_pk                         | CREATE UNIQUE INDEX video_tags_pk ON public.video_tags USING btree (index)
  youtube_comments   | youtube_comments_pk                   | CREATE UNIQUE INDEX youtube_comments_pk ON public.youtube_comments USING btree (index)
- youtube_comments   | youtube_comments_video_id_index       | CREATE INDEX youtube_comments_video_id_index ON public.youtube_comments USING hash (video_id)
  youtube_comments   | youtube_comments_video_id_index_btree | CREATE INDEX youtube_comments_video_id_index_btree ON public.youtube_comments USING btree (video_id)
