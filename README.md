@@ -5,6 +5,7 @@
  ## Research Questions
  - Is there any viewer crossover between political and gaming videos ?
  - Can we determine where news/politics channels fall on a left to right political axis ?
+ - Do viewers always watch channels on the same political side ?
  
  If it is the case, then : 
  - What type of gaming content is related to which side of the political map ?
@@ -15,7 +16,9 @@
  - If a gaming channel grows, do the news/political channels who share viewership also benefit from it ? And vice-versa ?
  - How many people change their political opinions ? Does it stem from different gaming viewing habits ? Is it linked to particular political events ?
  
- ## Datasets
+ ## Proposed additional datasets
+ *List the additional dataset(s) you want to use (if any), and some ideas on how you expect to get, manage, process, and enrich it/them. Show us that you’ve read the docs and some examples, and that you have a clear idea on what to expect. Discuss data size and format if relevant. It is your responsibility to check that what you propose is feasible.*
+ 
  We will be using the Youniverse dataset. We downloaded the all of the data on a *postgres* database, which is stored on a hard drive (327GB). We stored all indices on a separate SSD (215GB). We did this because we don't have enough space on our personal computers, but we want to be able to use as musch of the data as we see fit. This also greatly speeds up our computations, as we can get queries directly from the database, using multiple cores, instead of using pandas.
  
  We might want to use a dataset containing a timeline of political events between 2005 and 2019, to try and relate political interest to particular events (such as the american presidential elections).
@@ -25,7 +28,14 @@ For the remaining of the project, we will assume that a video's comments users r
 
  
  ## Proposed timeline
- 
+ - Check number of links in the description
+ - Classify the News & Pol. channels into political affiliation (spectrum or binary)
+ - At the same time, find which gaming and political channels the viewers are leaving a comment
+ - Classify viewers into political affiliation
+ - Check if there are significant correlation between watched gaming and political YouTubers
+ - If yes, classify gaming channels into groups of games of type of games
+ - Check correlation between political channels and groups/types of games watched by the viewers
+ - Check if viewers always always watch channels on the same political side
  
  ## Organization within the team
  Everyone will touch all parts of the project, but here are our main tasks :
