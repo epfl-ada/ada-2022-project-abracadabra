@@ -42,7 +42,7 @@ To classify the news/politics channels, we might use **spectral clustering** to 
  - Check correlation between political channels and those communities
  
  ## Organization within the team
- Everyone will work on all parts of the project, but here are our main tasks :
+ Everyone will work on all parts of the above milestones, but here are our main tasks :
  - Adrien : Database management, loading data
  - Alexander : Graphs, visualizations
  - Changling : Clustering algorithms, parameter tuning
