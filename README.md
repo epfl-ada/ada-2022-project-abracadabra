@@ -1,15 +1,16 @@
 ﻿# An analysis of Youtube viewership to find links between preferred gaming content and political affiliation
 
-*In this project, we want to determine if there are any links between certain types of gaming channels and political preferences. To do this, we will categorize news and politics youtubers on a left to right axis, then look if gaming channels have any significant crossover in viewership. We will then group similar gaming channels and look if they share viewership with the same political channels.*
+*In this project, we want to find communities in Youtube's gaming viewership, and look towards what side of the political spectrum each community tends to lean. By doing this, we may be able to determine if certain games attract more right/left wing viewers, and see if people's interests are linked to their political preferences. To do this, we will first classify news and political channels on a left-to-right political axis, then look at their shared viewership with gaming channels. We will then look if the viewers tend to watch news/political videos which have similar political ideas to determine if we can classify viewer's political preferences. We then cluster communities in the gaming space and see if their shared viewers have the same political leanings.*
  
  ## Research Questions
- - Is there any viewer crossover between political and gaming videos ?
- - Can we determine where news/politics channels fall on a left to right political axis ?
- - Do viewers always watch channels on the same political side ?
+ - Is there any viewer crossover between political and gaming videos ? How much ?
+ - Can we determine where news/politics channels fall on a left-to-right political axis ?
+ - Do viewers always watch news/politics channels on the same political side ?
  
  If it is the case, then : 
+ - What gaming channels have right/left wing viewers ?
  - What type of gaming content is related to which side of the political map ?
- - Is the crossover based more on the individual channels, or is there a more general political divide in gaming content ?
+ - Is the crossover based more on the individual channels, or is there communities around games who have a political preference ?
  
  If we have time : 
  - What about sports channels, or beauty vloggers ?
@@ -19,14 +20,15 @@
  ## Proposed additional datasets
  We will be using the Youniverse dataset. We downloaded the all of the data on a *postgres* database, which is stored on a hard drive (327GB). We stored all indices on a separate SSD (215GB). We did this because we don't have enough space on our personal computers, but we want to be able to use as musch of the data as we see fit. This also greatly speeds up our computations, as we can get queries directly from the database, using multiple cores, instead of using pandas.
  
- We might want to use a dataset containing a timeline of political events between 2005 and 2019, to try and relate political interest to particular events (such as the american presidential elections). But this will only happen if we have achieved our primary goal.
+ If we can't find a way to classify the news/politics channels politically, we may have to look into datasets that do the job for us.
+ 
+ If we have time, we might want to use a dataset containing a timeline of political events between 2005 and 2019, to try and relate political interest to particular events (such as the american presidential elections). But this will only happen if we have achieved our primary goal.
  
  ## Methods
-For the remaining of the project, we will assume that a video's comments users represents that video's viewer base. This is not necessarily the case, but as we only have access to the comments dataset, we will make this approximation.
+For the remaininder of the project, we will assume that a video's comments users represents that video's viewer base. This is not necessarily the case, but as we only have access to the comments dataset, we will make this approximation.
 
-To classify the news/politics channels, we might use **spectral clustering** to cluster similar channels together using shared news/political viewerbase as links. If this doesn't work, we might look into finding lists of channels that are already put on a political map, from the internet, and use that subset of channels for our analysis.
-
-**Spectral clustering** can also be used to find gaming communities and even find gaming channels that are close to news/political channels.
+To classify the news/politics channels, we might use **spectral clustering** to cluster similar channels together using shared viewerbase as edges. If this doesn't work, we might look into finding lists of channels that are already put on a political map, from the internet, and use that subset of channels for our analysis.
+**Spectral clustering** can also be used to find gaming communities.
 
  
  ## Proposed timeline
