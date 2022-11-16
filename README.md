@@ -21,28 +21,32 @@
  
  We will be using the Youniverse dataset. We downloaded the all of the data on a *postgres* database, which is stored on a hard drive (327GB). We stored all indices on a separate SSD (215GB). We did this because we don't have enough space on our personal computers, but we want to be able to use as musch of the data as we see fit. This also greatly speeds up our computations, as we can get queries directly from the database, using multiple cores, instead of using pandas.
  
- We might want to use a dataset containing a timeline of political events between 2005 and 2019, to try and relate political interest to particular events (such as the american presidential elections).
+ We might want to use a dataset containing a timeline of political events between 2005 and 2019, to try and relate political interest to particular events (such as the american presidential elections). But this will only happen if we have achieved our primary goal.
  
  ## Methods
 For the remaining of the project, we will assume that a video's comments users represents that video's viewer base. This is not necessarily the case, but as we only have access to the comments dataset, we will make this approximation.
 
+To classify the news/politics channels, we might use **spectral clustering** to cluster similar channels together using shared news/political viewerbase as links. If this doesn't work, we might look into finding lists of channels that are already put on a political map, from the internet, and use that subset of channels for our analysis.
+
+**Spectral clustering** can also be used to find gaming communities and even find gaming channels that are close to news/political channels.
+
  
  ## Proposed timeline
- - Check number of links in the description
+ - Check how many links video descriptions we can find (channels linking other channels). This is limited by the fact the descriptions are truncated.
  - Classify the News & Pol. channels into political affiliation (spectrum or binary)
- - At the same time, find which gaming and political channels the viewers are leaving a comment
- - Classify viewers into political affiliation
- - Check if there are significant correlation between watched gaming and political YouTubers
- - If yes, classify gaming channels into groups of games of type of games
- - Check correlation between political channels and groups/types of games watched by the viewers
+ - At the same time, find which gaming and political channels have shared viewerbase
  - Check if viewers always always watch channels on the same political side
+ - Classify viewers into political affiliation based on what political channels they watch
+ - Check if there is any significant correlation between what gaming and political YouTubers viewers watch
+ - If yes, classify gaming channels into clusters to find communities (probably based on what game is played)
+ - Check correlation between political channels and those communities
  
  ## Organization within the team
- Everyone will touch all parts of the project, but here are our main tasks :
+ Everyone will work on all parts of the project, but here are our main tasks :
  - Adrien : Database management, loading data
- - Alexander : 
- - Changling : 
- - Ewan : 
+ - Alexander : Graphs, visualizations
+ - Changling : Clustering algorithms, parameter tuning
+ - Ewan : Clustering algorithms, parameter tuning
  
  ## Questions for TAs
 - Do you have a good tools/methods for us to politically classify the news/politics channels ?
