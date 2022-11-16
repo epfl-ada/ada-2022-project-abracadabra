@@ -44,7 +44,7 @@ To classify the news/politics channels, we might use **spectral clustering** to 
  ## Organization within the team
  Everyone will work on all parts of the above milestones, but here are our main tasks :
  - Adrien : Database management, loading data
- - Alexander : Queries and computations on the data
+ - Alexander : Queries, computations on the data
  - Changling : Clustering algorithms, parameter tuning
  - Ewan : Graphs, visualizations
  
