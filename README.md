@@ -49,4 +49,4 @@ To classify the news/politics channels, we might use **spectral clustering** to 
  - Ewan : Clustering algorithms, parameter tuning
  
  ## Questions for TAs
-- Do you have a good tools/methods for us to politically classify the news/politics channels ?
+
