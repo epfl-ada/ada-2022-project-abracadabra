@@ -46,7 +46,7 @@ To classify the news/politics channels, we might use **spectral clustering** to 
  - Adrien : Database management, loading data
  - Alexander : Queries, computations on the data
  - Changling : Clustering algorithms, parameter tuning
- - Ewan : Graphs, visualizations
+ - Ewan : Graphs, visualizations, explanation of results
  
  ## Questions for TAs
 
