@@ -1,52 +1,10 @@
 # Introduction
 
-News sources today are diverse: newspapers, radio stations, websites and more.
-They are also widely accessible. The internet has allowed us to collect news
-from all around the world, covering practically any topic. From anywhere, we
-can read Russian sports news and hear about the latest celebrity gossip from
-Argentina.
+Youtube is a website with a diverse set of creators and viewers. However, similarly to the real world, one would assume that similar people have similar interests and thus interact with the same type of media. This should particularly be the case for political and news outlets, as the topics they discuss tend to be particularly divisive.
 
-The goal of this project is to organize these news outlets into communities.
-We want to answer the following questions:
+Our hypothesis is that this behaviour extends to interests that are seemingly unaffiliated to politics. Specifically, we want to see if the viewerbase of gaming content creators are related in any way to that of news and political Youtubers. If this is the case, we could then classify gaming communities on a political spectrum, and it could give us insights on the radicalization pipelines that we know already exist on Youtube.
 
-- Can we find a meaningful way to group news outlets?
-- Once found, is there a way to find which attributes characterize these groups?
-- Do some attributes strongly predict how groups are formed?
-- Can we visually convey the identity of such groups?
+## Important assumptions
+As our dataset doesn't contain any information about viewers, we assume that the commenter-base of a video is statistically representative of its viewerbase. This is clearly not the case, because people who watch every video from a certain content creator would probably have more of a tendency to write comments on their videos, but this assumption needs to be done to get any kind of analysis done.
 
-# The main idea
-
-What do newspapers that cover the same topics share ? It seems reasonable that
-similar newspapers would cite the same people. For example, two science
-magazines will likely cite authors of the latest research. US political news
-will cite politicians.
-
-Our hypothesis is that two journals that cite the same people are very likely
-to be similar. For example, they might discuss the same topic or be located in
-the same geographical area. This will form the basis of our analysis.
-
-# How did we do it?
-
-We used the 2020 [Quotebank dataset](https://zenodo.org/record/4277311), which
-contains a list of quotes. Each quote is associated with its likely speaker and
-the news outlet in which the quote appeared. Additional data about the speakers
-and the news outlets was extracted from the [Wikidata
-platform](https://www.wikidata.org/wiki/Wikidata:Main_Page). 
-
-As a first step, we used Quotebank to link news outlets to the people they
-cite. Using the data it provided, we were able to create news communities. With
-our method, news outlets are grouped by the authors of quotes. If two news
-outlets cite the same person many times, they are more likely to end up in the
-same group.
-
-## A technical parenthesis
-
-A good starting point is to look at the distribution of the data we are going to use. In our case, 
-the distribution of the number quotes per journal and of the number of different people cited per journal.
-
-![Log-log plot of the distribution of speakers and quotes](/assets/img/journal_distr.png)
-
-The figure shows that the distributions are heavy tailed. We find heavy tailed distributions in many real world phenomenons, 
-for examples the distribution of city sizes, of people friends in a network or the distribution of word counts in a text. As our data share a similar distribution with these phenomenons, it is also likely to share other properties with them. For instance, 
-we know that the way we mesure similarity works especially well with text and that real networks have tendency to form local clusters. It is a hint we are in the good direction.
-
+Furthermore, the comments dataset does not contain any information on the comment's text. So we also need to assume that all comments enjoyed or are in agreement with the video. Again, this is a questionable assumption, as hate comments are a notoriously common experience for any Youtuber.
