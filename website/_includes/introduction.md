@@ -1,8 +1,8 @@
 # Introduction
 
-Youtube is a website with a diverse set of creators and viewers. However, similarly to the real world, one would assume that similar people have similar interests and thus interact with the same type of media. This should particularly be the case for political and news outlets, as the topics they discuss tend to be particularly divisive.
+Do gaming YouTubers have a political lean? To answer this question, we analyzed the shared viewerbase between gaming and news/politics YouTube channels to see if there is a link between the two. By doing this, we can gain insight into the political leanings of gaming YouTubers and then see if specific games attract certain types of political opinions.
 
-Our hypothesis is that this behaviour extends to interests that are seemingly unaffiliated to politics. Specifically, we want to see if the viewerbase of gaming content creators are related in any way to that of news and political Youtubers. If this is the case, we could then classify gaming communities on a political spectrum, and it could give us insights on the radicalization pipelines that we know already exist on Youtube.
+Because gaming creators are often watched by younger audiences, it is important to consider if they have any political leanings, as they can have a large influence on their viewers. If we were to find any link, this project would be important in order to inform viewers on potential bias in the content they are consuming.
 
 ## Important assumptions
 As our dataset doesn't contain any information about viewers, we assume that the commenter-base of a video is statistically representative of its viewerbase. This is clearly not the case, because people who watch every video from a certain content creator would probably have more of a tendency to write comments on their videos, but this assumption needs to be done to get any kind of analysis done.
