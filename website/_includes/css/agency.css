@@ -280,16 +280,23 @@ header {
 }
 
 header .intro-text {
-    padding-top: 100px;
-    padding-bottom: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
+
+
 
 header .intro-text .intro-lead-in {
     margin-bottom: 25px;
     font-family: {{ site.data.template.font.secondary }};
     font-size: 22px;
-    font-style: italic;
     line-height: 22px;
+}
+
+header .intro-text .intro-lead-in .logo{
+    margin-bottom: 20px;
+    margin-right: -32px;
+    
 }
 
 header .intro-text .intro-heading {
@@ -303,16 +310,17 @@ header .intro-text .intro-heading {
 
 @media(min-width:768px) {
     header .intro-text {
-        padding-top: 300px;
-        padding-bottom: 200px;
+        padding-top: 100px;
+        padding-bottom: 100px;
     }
+
 
     header .intro-text .intro-lead-in {
         margin-bottom: 25px;
         font-family: {{ site.data.template.font.secondary }};
         font-size: 40px;
-        font-style: italic;
-        line-height: 40px;
+       
+        line-height: 0px;
     }
 
     header .intro-text .intro-heading {
