@@ -6,8 +6,10 @@
                 <h2 class="section-heading">Results</h2>
             </div>
         </div>
+        {% capture story %}{% include story.md %}{% endcapture %}
+        {{ story | markdownify }}
         <p align="center">
-            <iframe style="width:80%;height:700px;" src="https://alpopesc.github.io/ADA_graph_1_2_cluster/" caption="bibi"></iframe>
+            <iframe style="width:80%;height:700px;" src="https://alpopesc.github.io/ADA_graph_1_2_cluster/" title="bibi"></iframe>
         </p>
         <p align="center">
             Caption Bibaboup
