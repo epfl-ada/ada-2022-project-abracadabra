@@ -1,0 +1,17 @@
+---
+layout: default
+title: Gaming content and political affiliation
+description: An analysis of Youtube viewership to find links between preferred gaming content and political affiliation
+---
+
+{% capture introduction %}{% include introduction.md %}{% endcapture %}
+{{ introduction | markdownify }}
+
+{% capture results %}{% include results.md %}{% endcapture %}
+{{ results | markdownify }}
+
+{% include map.html %}
+
+{% capture conclusion %}{% include conclusion.md %}{% endcapture %}
+{{ conclusion | markdownify }}
+

@@ -1,0 +1,55 @@
+I"ñ<h1 id="introduction">Introduction</h1>
+
+<p>News sources today are diverse: newspapers, radio stations, websites and more.
+They are also widely accessible. The internet has allowed us to collect news
+from all around the world, covering practically any topic. From anywhere, we
+can read Russian sports news and hear about the latest celebrity gossip from
+Argentina.</p>
+
+<p>The goal of this project is to organize these news outlets into communities.
+We want to answer the following questions:</p>
+
+<ul>
+  <li>Can we find a meaningful way to group news outlets?</li>
+  <li>Once found, is there a way to find which attributes characterize these groups?</li>
+  <li>Do some attributes strongly predict how groups are formed?</li>
+  <li>Can we visually convey the identity of such groups?</li>
+</ul>
+
+<h1 id="the-main-idea">The main idea</h1>
+
+<p>What do newspapers that cover the same topics share ? It seems reasonable that
+similar newspapers would cite the same people. For example, two science
+magazines will likely cite authors of the latest research. US political news
+will cite politicians.</p>
+
+<p>Our hypothesis is that two journals that cite the same people are very likely
+to be similar. For example, they might discuss the same topic or be located in
+the same geographical area. This will form the basis of our analysis.</p>
+
+<h1 id="how-did-we-do-it">How did we do it?</h1>
+
+<p>We used the 2020 <a href="https://zenodo.org/record/4277311">Quotebank dataset</a>, which
+contains a list of quotes. Each quote is associated with its likely speaker and
+the news outlet in which the quote appeared. Additional data about the speakers
+and the news outlets was extracted from the <a href="https://www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata
+platform</a>.</p>
+
+<p>As a first step, we used Quotebank to link news outlets to the people they
+cite. Using the data it provided, we were able to create news communities. With
+our method, news outlets are grouped by the authors of quotes. If two news
+outlets cite the same person many times, they are more likely to end up in the
+same group.</p>
+
+<h2 id="a-technical-parenthesis">A technical parenthesis</h2>
+
+<p>A good starting point is to look at the distribution of the data we are going to use. In our case, 
+the distribution of the number quotes per journal and of the number of different people cited per journal.</p>
+
+<p><img src="/assets/img/journal_distr.png" alt="Log-log plot of the distribution of speakers and quotes" /></p>
+
+<p>The figure shows that the distributions are heavy tailed. We find heavy tailed distributions in many real world phenomenons, 
+for examples the distribution of city sizes, of people friends in a network or the distribution of word counts in a text. As our data share a similar distribution with these phenomenons, it is also likely to share other properties with them. For instance, 
+we know that the way we mesure similarity works especially well with text and that real networks have tendency to form local clusters. It is a hint we are in the good direction.</p>
+
+:ET
