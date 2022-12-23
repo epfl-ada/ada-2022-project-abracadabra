@@ -89,8 +89,9 @@ As you can see below, the network makes two clear groups, which mostly correspon
     <iframe style="width:80%;height:700px;" src="https://alpopesc.github.io/ADA_graph_1_2_cluster/" title="bibi"></iframe>
 </p>
 <p align="center">
-    Caption : Cluster machin truc much
+    Cluster visualisation
 </p>
+
 At first, we thought it separated the channels into gaming and news/politics content, as most nodes in the left cluster are news channels, and most of the others are gaming.
 
 However, there is a much better explanation for the way these groups formed.
@@ -104,6 +105,32 @@ We thought this type of problem wouldn't arise as our dataset should only contai
 What tripped us at first was that the clusters look a lot like the gaming and news/politics divide. This is actually just because there are a lot more gaming channels than news channels, and they are for the most part English speaking. For the news channels, there tends to be only a few per country and their number tends to grow with the size of the population. This means that the top 200 most subscribed news/politics channels is dominated by countries with a lot of people, such as India and Pakistan.
 
 Because we still want to find out if gaming YouTubers have a political lean, and that most of the top 200 speak English, we need to filter these non-English channels out. We did not find any good way of doing this before the clustering, as some videos have English titles and descriptions, but speak in another language. Therefore we decided to use our clusters to filter them out, and restart the process with only the right cluster. We also make sure to filter out the disconnected channels.
+
+## Recursive clustering
+
+Once these channels were filtered out, we recomputed a new normalised similarity matrix and separated the channels into two clusters. Again, we found one big cluster of English-speaking channels and one cluster with just 3 Kenyan news channels.
+
+<figure>
+    <img alt="Kenyan news channels cluster" src="/img/kenyan_cluster.PNG" style="width:60%; display: block; margin: 0 auto">
+    <div align="center" >Fig. 4 - Kenyan news channels cluster</div>
+</figure>
+
+At this point, we were quite annoyed, as we thought we might have to go through every country, but as long as we continued recursively clustering and filtering out non-English channels, we would eventually find what we were looking for.
+
+To speed up the process, we decided to make 4 clusters instead of two, so we could filter out more groups at a time. Luckily, this corresponded to exactly how much was left to filter out. 
+
+We were left with 2 clusters, here are their statistics :
+
+<figure>
+    <img alt="Cluster statistics" src="/img/stats_gaming_politics_clusters.PNG" style="width:60%; display: block; margin: 0 auto">
+    <div align="center" >Fig. 5 - Cluster statistics</div>
+</figure>
+
+As we can see, one cluster is clearly has more news/politics channels, and the other corresponds to gaming YouTubers. This means that overall, people that comment on news/politics videos tend not to comment as much on gaming videos and vice-versa.
+
+## Classifying the news/politics channels
+
+
 
 </section>
 
