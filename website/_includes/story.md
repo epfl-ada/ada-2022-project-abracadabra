@@ -1,3 +1,41 @@
+<!-- Intro Section -->
+<section id="intro">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Introduction</h2>
+            </div>
+        </div>
+        <p>
+            Youtube is a website with a diverse set of creators and viewers. However, similarly to the real world, 
+            one would assume that similar people have similar interests and thus interact with the same type of media. 
+            This should particularly be the case for political and news outlets, as the topics they discuss tend to be 
+            particularly divisive.
+            Our hypothesis is that this behaviour extends to interests that are seemingly unaffiliated to politics. 
+            Specifically, we want to see if the viewerbase of gaming content creators are related in any way to that 
+            of news and political Youtubers. If this is the case, we could then classify gaming communities on a 
+            political spectrum, and it could give us insights on the radicalization pipelines that we know already
+            exist on Youtube.
+        </p>
+        &nbsp;
+        
+        <h4 class="section-heading">Important assumptions</h4>
+        
+        <p>
+            As our dataset doesn't contain any information about viewers, we assume that the commenter-base of a 
+            video is statistically representative of its viewerbase. This is clearly not the case, because people 
+            who watch every video from a certain content creator would probably have more of a tendency to write 
+            comments on their videos, but this assumption needs to be done to get any kind of analysis done.
+
+            Furthermore, the comments dataset does not contain any information on the comment's text. So we also 
+            need to assume that all comments enjoyed or are in agreement with the video. Again, this is a questionable
+            assumption, as hate comments are a notoriously common experience for any Youtuber.
+        </p>
+
+    </div>
+</section>
+
+<!-- Analysis Section -->
 <section id="analysis">
 <div class="col-lg-12 text-center">
     <h2 class="section-heading">Analysis</h2>
@@ -34,3 +72,24 @@ No, after searching for these channels on YouTube, we have simple explanations f
 - SOMOY TV is a Bangladeshi television broadcast. This means that their viewers simply might not speak English.
 
 British Pathé is more difficult to explain. This channel publishes archives from 1910 to 1984.  Their videos are in English and consistently get comments. Because the subject matter is quite niche, there might just not be any natural crossover in commenters as none of the other channels work with this type of content.
+
+<!--On a réussi à mettre un cluster, mtn je te laisse décider où le placer dans la data story-->
+<p align="center">
+    <iframe style="width:80%;height:700px;" src="https://alpopesc.github.io/ADA_graph_1_2_cluster/" title="bibi"></iframe>
+</p>
+<p align="center">
+    Caption : Cluster machin truc much
+</p>
+
+</section>
+
+<!--Conclusion section-->
+
+<section id="conclusion">
+<div class="col-lg-12 text-center">
+    <h2 class="section-heading">Conclusion</h2>
+</div>
+
+<!-- Ecrire ici-->
+
+</section>
