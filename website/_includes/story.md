@@ -38,7 +38,7 @@ Because gaming creators are often watched by younger audiences, it is important 
 <h4 class="section-heading">Trying to find similar channels</h4>
 
 
-Our first intuition was to take the aforementioned gaming and political channels and trying to find groups of YouTubers with similar commenters, regardless of the channel type. By doing this, if we found clusters containing both news/politics and gaming channels, we might have already found what we were looking for, as it would mean that some gaming YouTubers shared more viewers with some news or politics channels than to other gaming creators.
+Our first intuition was to take the aforementioned gaming and political channels and to find groups of YouTubers with similar commenters, regardless of the channel type. By doing this, if we found clusters containing both news/politics and gaming channels, we might have already found what we were looking for, as it would mean that some gaming YouTubers shared more viewers with some news or politics channels than to other gaming creators.
 
 To do this, we looked at every commenter who left a comment on videos created by at least two of these channels. We then created a 400 by 400 matrix called the similarity matrix (depicted below). Each element of this matrix represents the number of commenters that left a comment on both channels. For example, the first row and column of the matrix represents PlayStation's shared commenters with every other channel. PewDiePie is represented by the fourth row and column, so if we look at the fourth element of the first row (or the first element of the first column), we will find how many people commented on both channels.
 
@@ -55,7 +55,7 @@ The normalized similarity matrix is thus given below :
     <div align="center" >Fig. 2 - Normalized Similarity Matrix</div>
 </figure>
 
-As we can see, the matrix isn't dominated by particular channels, as we can see that specific connections between channels pop out.
+As we can see, the matrix isn't dominated by particular channels. But rather there are specific connections between channels that pop out.
 
 Surprisingly, we find that 5 of the channels do not share commenters with any of the other channels. We did not expect this, as these are some of the most popular channels on YouTube. We thought that any of them would have a common commenter with at least one of the others. 
 
@@ -70,10 +70,10 @@ Let's look at theses disconnected channels :
 
 Weird, these seem like popular channels, there should at least be some crossover in viewership with some of the other channels. Have we discovered a subscriber-bot scandal ?
 
-No, after searching for these channels on YouTube, we have simple explanations for 4 of these 5 channels :
+After taking a look at these channels on YouTube, we came up to these simple explanations for 4 of these 5 channels :
 
-- Mastersaint, Jonni Valentayn and ABC News (Australia) simply have their comments turned off
-- SOMOY TV is a Bangladeshi television broadcast. This means that their viewers simply might not speak English.
+- Mastersaint, Jonni Valentayn and ABC News (Australia) have their comments turned off
+- SOMOY TV is a Bangladeshi television broadcast, so we assumed their viewers might not speak English and are not the most likely audience to watch and comment on other non-Bangladeshi videos.
 
 British Pathé is more difficult to explain. This channel publishes archives from 1910 to 1984.  Their videos are in English and consistently get comments. Because the subject matter is quite niche, there might just not be any natural crossover in commenters as none of the other channels work with this type of content.
 
@@ -82,8 +82,6 @@ British Pathé is more difficult to explain. This channel publishes archives fro
 Using the above normalized similarity matrix, we ran a spectral clustering algorithm which gave us 2 groups of channels. We then made a force-based connection network to visualize our channels, using the similarity between two channels as the weight of their common edge. Finally, we colored the nodes based on the clusters computed by our algorithm.
 
 As you can see below, the network makes two clear groups, which mostly correspond to the computed clusters.
-
-<!--On a réussi à mettre un cluster, mtn je te laisse décider où le placer dans la data story-->
 
 <p align="center">
     <iframe style="width:80%;height:700px;" src="https://alpopesc.github.io/ADA_graph_1_2_cluster/" title="bibi"></iframe>
@@ -104,7 +102,7 @@ We thought this type of problem wouldn't arise as our dataset should only contai
 
 What tripped us at first was that the clusters look a lot like the gaming and news/politics divide. This is actually just because there are a lot more gaming channels than news channels, and they are for the most part English speaking. For the news channels, there tends to be only a few per country and their number tends to grow with the size of the population. This means that the top 200 most subscribed news/politics channels is dominated by countries with a lot of people, such as India and Pakistan.
 
-Because we still want to find out if gaming YouTubers have a political lean, and that most of the top 200 speak English, we need to filter these non-English channels out. We did not find any good way of doing this before the clustering, as some videos have English titles and descriptions, but speak in another language. Therefore we decided to use our clusters to filter them out, and restart the process with only the right cluster. We also make sure to filter out the disconnected channels.
+Because we still wanted to find out if gaming YouTubers have a political lean, and that most of the top 200 speak English, we needed to filter these non-English channels out. We did not find any good way of doing this before the clustering, as some videos have English titles and descriptions, but speak in another language. Therefore we decided to use our clusters to filter them out, and restart the process with only the right cluster. We also made sure to filter out the disconnected channels.
 
 ## Recursive clustering
 
@@ -124,7 +122,7 @@ Luckily, we didn't have to. We were left with 2 clusters, here are their statist
     <div align="center" >Fig. 5 - Cluster statistics</div>
 </figure>
 
-As we can see, one cluster is clearly has more news/politics channels, and the other corresponds to gaming YouTubers. This means that overall, people that comment on news/politics videos tend not to comment as much on gaming videos and vice-versa.
+As we can see, one cluster is clearly has more news/politics channels, and the other corresponds to gaming YouTubers. This means that overall, people that comment on news/politics videos tend not to comment as much on gaming videos and vice versa.
 
 ## Classifying the news/politics channels
 
@@ -132,13 +130,13 @@ If there isn't any inherent crossover in commenters, we can still try and find s
 
 To do this, we took the filtered channels computed previously and only kept the news/political channels. We now have channels that are English-speaking, and only talk about news and/or politics.
 
-Then, we apply the same clustering method by looking at their common commenters, making a similarity matrix and running a spectral clustering algorithm. To allow for some nuance, we decided to cluster into 4 groups.
+Then, we applied the same clustering method by looking at their common commenters, making a similarity matrix and running a spectral clustering algorithm. To allow for some nuance, we decided to cluster into 4 groups.
 
 Here is the resulting network : 
 
 ------------------ POLITICS NETWORK -----------------------
 
-The first two clusters are not very useful. One of them only has one channel, which is John Legends (a mislabelled music channel). The other group contains 2 channels, but they are both owned by GMA, so their similarity is obviously going to be high.
+The first two clusters are not very useful. One of them only has one channel, which is John Legends (a mislabelled music channel). The other group contains 2 channels, but they are both owned by GMA (Good Morning America), so their similarity is obviously going to be high.
 
 For the two others, although they contain quite a lot of channels, we cannot think of any kind of reason as to what they represent. For example, looking at American politics, notoriously republican channels such as Ben Shapiro and Fox News are in the same cluster as CNN or MSNBC, who are usually more pro-democrats. We thought it might still separate based on geography, but in both clusters, a variety of different regions are represented.
 
@@ -152,7 +150,6 @@ This would mean that people don't tend to comment on videos that always have the
 <div class="col-lg-12 text-center">
     <h2 class="section-heading">Conclusion</h2>
 </div>
-<!-- Ecrire ici-->
 
 We therefore conclude that, under our questionable assumptions, there is no significant crossover in viewership between gaming YouTubers and news/politics channels. This is probably due to a difference in age demographics, as children and adolescents probably don't care as much about news and politics compared to their favorite video game.
 
