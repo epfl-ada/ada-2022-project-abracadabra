@@ -1,9 +1,9 @@
 <!-- Intro Section -->
 
 <section id="intro">
-    <div class="container">
+    <div class="container col-lg-10 mx-auto">
         <div class="row">
-            <div class="col-lg-12 text-center">
+            <div class="col-lg-10 text-center">
                 <h2 class="section-heading">Introduction</h2>
             </div>
         </div>
@@ -39,7 +39,8 @@ channels as well as the top 200 news/politics channels.
 
 <!-- Analysis Section -->
 <section id="analysis">
-<div class="col-lg-12 text-center">
+<div class="container col-lg-10 mx-auto">
+<div class="col-lg-10 text-center">
     <h2 class="section-heading">Analysis</h2>
 </div>
 
@@ -250,12 +251,14 @@ separate based on geography, but in both clusters, a variety of different region
 This would mean that people don't tend to comment on videos that always have the same political opinions. This also 
 means that we cannot prove anything about the political lean of gaming YouTubers.
 </p>
+</div>
 </section>
 
 <!--Conclusion section-->
 
 <section id="conclusion">
-<div class="col-lg-12 text-center">
+<div class="container col-lg-10 mx-auto">
+<div class="col-lg-10 text-center">
     <h2 class="section-heading">Conclusion</h2>
 </div>
 <p>
@@ -270,4 +273,5 @@ Furthermore, we weren't able to classify commenters into any kind of political a
 Having access to the viewership data would probably have revealed a lot more about the situation, but based on our 
 analysis, gaming communities are not tied to any kind of political bias.
 </p>
+</div>
 </section>
