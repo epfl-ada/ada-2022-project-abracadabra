@@ -257,8 +257,9 @@ means that we cannot prove anything about the political lean of gaming YouTubers
 <!--Conclusion section-->
 
 <section id="conclusion">
-<div class="container col-lg-10 mx-auto">
-<div class="col-lg-10 text-center">
+<div class="row">
+<div class="col-lg-10 mx-auto">
+<div class="text-center">
     <h2 class="section-heading">Conclusion</h2>
 </div>
 <p>
@@ -273,5 +274,6 @@ Furthermore, we weren't able to classify commenters into any kind of political a
 Having access to the viewership data would probably have revealed a lot more about the situation, but based on our 
 analysis, gaming communities are not tied to any kind of political bias.
 </p>
+</div>
 </div>
 </section>
