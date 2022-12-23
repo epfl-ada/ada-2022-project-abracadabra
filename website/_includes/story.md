@@ -117,9 +117,7 @@ Once these channels were filtered out, we recomputed a new normalised similarity
 
 At this point, we were quite annoyed, as we thought we might have to go through every country, but as long as we continued recursively clustering and filtering out non-English channels, we would eventually find what we were looking for.
 
-To speed up the process, we decided to make 4 clusters instead of two, so we could filter out more groups at a time. Luckily, this corresponded to exactly how much was left to filter out. 
-
-We were left with 2 clusters, here are their statistics :
+Luckily, we didn't have to. We were left with 2 clusters, here are their statistics :
 
 <figure>
     <img alt="Cluster statistics" src="/img/stats_gaming_politics_clusters.PNG" style="width:60%; display: block; margin: 0 auto">
@@ -130,7 +128,21 @@ As we can see, one cluster is clearly has more news/politics channels, and the o
 
 ## Classifying the news/politics channels
 
+If there isn't any inherent crossover in commenters, we can still try and find some type of political bias for gaming YouTubers by first classifying the news/politics channels on a political axis, and then look at their commenters to see what gaming channels they like to watch.
 
+To do this, we took the filtered channels computed previously and only kept the news/political channels. We now have channels that are English-speaking, and only talk about news and/or politics.
+
+Then, we apply the same clustering method by looking at their common commenters, making a similarity matrix and running a spectral clustering algorithm. To allow for some nuance, we decided to cluster into 4 groups.
+
+Here is the resulting network : 
+
+------------------ POLITICS NETWORK -----------------------
+
+The first two clusters are not very useful. One of them only has one channel, which is John Legends (a mislabelled music channel). The other group contains 2 channels, but they are both owned by GMA, so their similarity is obviously going to be high.
+
+For the two others, although they contain quite a lot of channels, we cannot think of any kind of reason as to what they represent. For example, looking at American politics, notoriously republican channels such as Ben Shapiro and Fox News are in the same cluster as CNN or MSNBC, who are usually more pro-democrats. We thought it might still separate based on geography, but in both clusters, a variety of different regions are represented.
+
+This would mean that people don't tend to comment on videos that always have the same political opinions. This also means that we cannot prove anything about the political lean of gaming YouTubers.
 
 </section>
 
@@ -140,7 +152,12 @@ As we can see, one cluster is clearly has more news/politics channels, and the o
 <div class="col-lg-12 text-center">
     <h2 class="section-heading">Conclusion</h2>
 </div>
-
 <!-- Ecrire ici-->
+
+We therefore conclude that, under our questionable assumptions, there is no significant crossover in viewership between gaming YouTubers and news/politics channels. This is probably due to a difference in age demographics, as children and adolescents probably don't care as much about news and politics compared to their favorite video game.
+
+Furthermore, we weren't able to classify commenters into any kind of political affiliation.
+
+Having access to the viewership data would probably have revealed a lot more about the situation, but based on our analysis, gaming communities are not tied to any kind of political bias.
 
 </section>
