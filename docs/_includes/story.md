@@ -103,7 +103,7 @@ As you can see below, the network makes two clear groups, which mostly correspon
     </div>
 </figure>
 <p align="center">
-    <iframe style="width:80%;height:700px;" src="https://alpopesc.github.io/ADA_graph_1_2_cluster/" title="ADA_graph_1_2_cluster"></iframe>
+    <iframe style="width:90%;height:700px;" src="https://alpopesc.github.io/ADA_graph_1_2_cluster/" title="ADA_graph_1_2_cluster"></iframe>
 </p>
 
 <p>
@@ -157,7 +157,7 @@ As we can see, one cluster is clearly has more news/politics channels, and the o
     </div>
 </figure>
 <p align="center">
-    <iframe style="width:80%;height:700px;" src="https://alpopesc.github.io/english_2/network" title="english_2_network"></iframe>
+    <iframe style="width:90%;height:700px;" src="https://alpopesc.github.io/english_2/network" title="english_2_network"></iframe>
 </p>
 
 
@@ -181,7 +181,7 @@ Here is the resulting network :
     </div>
 </figure>
 <p align="center">
-    <iframe style="width:80%;height:700px;" src="https://alpopesc.github.io/politics_4/network/" title="bibi"></iframe>
+    <iframe style="width:90%;height:700px;" src="https://alpopesc.github.io/politics_4/network/" title="politics_4_network"></iframe>
 </p>
 
 
