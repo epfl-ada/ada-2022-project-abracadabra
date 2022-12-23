@@ -857,7 +857,7 @@ ul.social-buttons li a:active {
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
 }
-
+/* This is a single-line comment
 ::-moz-selection {
     text-shadow: none;
     background: #{{ site.data.template.color.primary }};
@@ -867,7 +867,7 @@ ul.social-buttons li a:active {
     text-shadow: none;
     background: #{{ site.data.template.color.primary }};
 }
-
+ */
 img::selection {
     background: 0 0;
 }
