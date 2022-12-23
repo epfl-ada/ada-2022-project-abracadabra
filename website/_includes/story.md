@@ -96,17 +96,20 @@ Using the above normalized similarity matrix, we ran a spectral clustering algor
 <p>
 As you can see below, the network makes two clear groups, which mostly correspond to the computed clusters.
 </p>
+
+<figure>
+    <div align="center">
+        Clusters group by language
+    </div>
+</figure>
 <p align="center">
     <iframe style="width:80%;height:700px;" src="https://alpopesc.github.io/ADA_graph_1_2_cluster/" title="bibi"></iframe>
 </p>
-<figure>
-    <div align="center">
-        Cluster visualisation
-    </div>
-</figure>
+
 <p>
 At first, we thought it separated the channels into gaming and news/politics content, as most nodes in the left cluster are news channels, and most of the others are gaming.
 </p>
+
 <p>
 However, there is a much better explanation for the way these groups formed.
 </p>
@@ -148,6 +151,15 @@ Luckily, we didn't have to. We were left with 2 clusters, here are their statist
 As we can see, one cluster is clearly has more news/politics channels, and the other corresponds to gaming YouTubers. This means that overall, people that comment on news/politics videos tend not to comment as much on gaming videos and vice versa.
 </p>
 
+<figure>
+    <div align="center">
+        Clusters group by channel category
+    </div>
+</figure>
+<p align="center">
+    <iframe style="width:80%;height:700px;" src="https://alpopesc.github.io/english_2/" title="bibi"></iframe>
+</p>
+
 
 <h4 class="section-heading">Classifying the news/politics channels</h4>
 <p>
@@ -162,7 +174,17 @@ Then, we applied the same clustering method by looking at their common commenter
 <p>
 Here is the resulting network : 
 </p>
------------------- POLITICS NETWORK -----------------------
+
+<figure>
+    <div align="center">
+        Politics cluster visualisation
+    </div>
+</figure>
+<p align="center">
+    <iframe style="width:80%;height:700px;" src="https://alpopesc.github.io/politics_4/network/" title="bibi"></iframe>
+</p>
+
+
 <p>
 The first two clusters are not very useful. One of them only has one channel, which is John Legends (a mislabelled music channel). The other group contains 2 channels, but they are both owned by GMA (Good Morning America), so their similarity is obviously going to be high.
 </p>
