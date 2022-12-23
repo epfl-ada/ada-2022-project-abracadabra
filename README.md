@@ -4,7 +4,7 @@ Please find our data story on the suject [here](https://epfl-ada.github.io/ada-2
 
 *In this project, we want to find communities in Youtube's gaming viewership, and look
 towards what side of the political spectrum each community tends to lean. By doing this,
-we may be able to determine if certain games attract more right/left wing viewers, and 
+we may be able to determine if certain games attract more right / left wing viewers, and 
 see if people's interests are linked to their political preferences. To do this, we will
 first classify news and political channels on a left-to-right political axis, then look 
 at their shared viewership with gaming channels. We will then look if the viewers tend 
@@ -31,13 +31,6 @@ from it ? And vice-versa ?
 viewing habits ? Is it linked to particular political events ?
  
  ## Proposed additional datasets
- We will be using the Youniverse dataset. We downloaded the all of the data on a *postgres*
- database, which is stored on a hard drive (327GB). We stored all indices on a separate 
- SSD (215GB). We did this because we don't have enough space on our personal computers,
- but we want to be able to use as musch of the data as we see fit. This also greatly 
- speeds up our computations, as we can get queries directly from the database, using
- multiple cores, instead of using pandas.
- 
  If we can't find a way to classify the news/politics channels politically, we may have
  to look into datasets that do the job for us.
  
@@ -47,23 +40,35 @@ viewing habits ? Is it linked to particular political events ?
  if we have achieved our primary goal.
  
  ## Methods
-For the remaininder of the project, we will assume that a video's comments users 
+For the remainder of the project, we will assume that a video's comments users 
 represents that video's viewer base. This is not necessarily the case, but as we 
 only have access to the comments dataset, we will make this approximation.
 
 To classify the news/politics channels, we might use **spectral clustering** to 
-cluster similar channels together using shared viewerbase as edges. If this doesn't 
+cluster similar channels together using shared viewer-base as edges. If this doesn't 
 work, we might look into finding lists of channels that are already put on a political
 map, from the internet, and use that subset of channels for our analysis.
 **Spectral clustering** can also be used to find gaming communities.
 
- 
+ ## 'Big' data considerations
+As this dataset is pretty big (~100Gb compressed) it is in the territory of datasets that
+won't fit in any computer and on which extracting information might be excruciatinely slow
+if parallelism is not possible while still not requiring compute and storage clusters.
+
+To collaborate more efficiently, reduce duplicate work / compute and because some team
+members had no computer with enough storage we used a server with a 512Gb ssd and 32 cores
+that one of the team member has access to to host the dataset on a postgres database. We
+used a database to be able to use indexes to quickly query parts of interest in the dataset
+and we chose postgres for its parallel queries capabilities (a query can use many cores and 
+partial results are merged). We go in more details about our choices and this setup in
+the beginning of the milestone 2 jupyter notebook.
+
  ## Proposed timeline
  - Check how many links video descriptions we can find (channels linking other channels).
  - This is limited by the fact the descriptions are truncated.
  - Classify the News & Pol. channels into political affiliation (spectrum or binary)
  - At the same time, find which gaming and political channels have shared viewerbase
- - Check if viewers always always watch channels on the same political side
+ - Check if viewers always watch channels on the same political side
  - Classify viewers into political affiliation based on what political channels they watch
  - Check if there is any significant correlation between what gaming and political 
  - YouTubers viewers watch
@@ -73,7 +78,7 @@ map, from the internet, and use that subset of channels for our analysis.
  
  ## Organization within the team
  Everyone will work on all parts of the above milestones, but here are our main tasks :
- - Adrien : Database management, loading data
+ - Adrien : Queries, database management, loading data
  - Alexander : Queries, network visualisations
  - Changling : Website, explanations, team management
  - Ewan : Analysis, algorithms
