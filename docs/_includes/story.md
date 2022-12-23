@@ -1,12 +1,11 @@
 <!-- Intro Section -->
 
 <section id="intro">
-    <div class="container col-lg-10 mx-auto">
-        <div class="row">
-            <div class="col-lg-10 text-center">
-                <h2 class="section-heading">Introduction</h2>
-            </div>
-        </div>
+<div class="row">
+<div class="col-lg-8 mx-auto">
+<div class="text-center">
+    <h2 class="section-heading">Introduction</h2>
+</div>
         <p>
             Do gaming YouTubers have a political lean? To answer this question, we analysed the shared viewerbase between
 gaming and news/politics YouTube channels to see if there is a link between the two. By doing this, we can gain insight
@@ -35,12 +34,14 @@ hate comments are a notoriously common experience for any Youtuber.
 channels as well as the top 200 news/politics channels.
         </p>
     </div>
+    </div>
 </section>
 
 <!-- Analysis Section -->
 <section id="analysis">
-<div class="container col-lg-10 mx-auto">
-<div class="col-lg-10 text-center">
+<div class="row">
+<div class="col-lg-10 mx-auto">
+<div class="text-center">
     <h2 class="section-heading">Analysis</h2>
 </div>
 
@@ -251,6 +252,7 @@ separate based on geography, but in both clusters, a variety of different region
 This would mean that people don't tend to comment on videos that always have the same political opinions. This also 
 means that we cannot prove anything about the political lean of gaming YouTubers.
 </p>
+</div>
 </div>
 </section>
 
