@@ -16,18 +16,12 @@ into the political leanings of gaming YouTubers and then see if specific games a
 political leanings, as they can have a large influence on their viewers. If we were to find any link, this project would
 be important in order to inform viewers on potential bias in the content they are consuming.
         </p>
-        &nbsp;
         <h4 class="section-heading">Important assumptions</h4>
         <p>
             As our dataset doesn't contain any information about viewers, we assume that the commenter-base of a video 
-is statistically representative of its viewerbase. This is clearly not the case, because people who watch every video 
-from a certain content creator would probably have more of a tendency to write comments on their videos, but this assumption
-needs to be done to get any kind of analysis done.
-        </p>
-        <p>
-            Furthermore, the comments dataset does not contain any information on the comment's text. So we also need
-to assume that all comments enjoyed or are in agreement with the video. Again, this is a questionable assumption, as 
-hate comments are a notoriously common experience for any Youtuber.
+is statistically representative of its viewerbase. Furthermore, the comments dataset does not contain any information on
+the comment's text. So we also need to assume that all comments enjoyed or are in agreement with the video. We're aware 
+these are questionables assumptions, as hate comments are a notoriously common experience for any Youtuber.
         </p>
         <p>
             Because the dataset is very big, we only considered the comments from the top 200 most subscribed gaming 
@@ -66,27 +60,27 @@ people commented on both channels.
     <img alt="Similarity matrix" src="{{ "/img/mat_400_sim_matrix.PNG" | prepend: site.baseurl }}" style="width:60%; display: block; margin: 0 auto">
     <div align="center" >Fig. 1 - Similarity matrix</div>
 </figure>
-&nbsp;
+
 <p>
 To get a more meaningful measure of similarity, we divided the number of common commenters by the average number of 
 comments left on both channels. This normalization is important as it gives a proportion of shared commenters instead 
-of just a number. This takes takes care of problems having to do with the biggest channel dominating our measures.
+of just a number. This takes care of problems having to do with the biggest channel dominating our measures.
 </p>
 <p>
-The normalized similarity matrix is thus given below :
+The normalized similarity matrix is thus given below:
 </p>
 
 <figure>
     <img alt="Normalized Similarity Matrix" src="{{ "/img/norm_sim_mat_400.PNG" | prepend: site.baseurl }}" style="width:60%; display: block; margin: 0 auto">
     <div align="center" >Fig. 2 - Normalized Similarity Matrix</div>
 </figure>
-&nbsp;
+
 <p>
 As we can see, the matrix isn't dominated by particular channels. But rather there are specific connections between 
 channels that pop out.
 </p>
 <p>
-Surprisingly, we find that 5 of the channels do not share commenters with any of the other channels. We did not expect
+Surprisingly, we find that 5 of the channels do not share commenters with any of the other channels. We did not expect 
 this, as these are some of the most popular channels on YouTube. We thought that any of them would have a common 
 commenter with at least one of the others. 
 </p>
@@ -138,7 +132,7 @@ As you can see below, the network makes two clear groups, which mostly correspon
 </p>
 
 <p>
-At first, we thought it separated the channels into gaming and news/politics content, as most nodes in the left cluster
+At first, we thought it separated the channels into gaming and news / politics content, as most nodes in the left cluster
 are news channels, and most of the others are gaming.
 </p>
 
@@ -165,7 +159,7 @@ of people, such as India and Pakistan.
 <p>
 Because we still wanted to find out if gaming YouTubers have a political lean, and that most of the top 200 speak 
 English, we needed to filter these non-English channels out. We did not find any good way of doing this before the
-clustering, as some videos have English titles and descriptions, but speak in another language. Therefore we decided 
+clustering, as some videos have English titles and descriptions, but speak in another language. Therefore, we decided 
 to use our clusters to filter them out, and restart the process with only the right cluster. We also made sure to
 filter out the disconnected channels.
 </p>
