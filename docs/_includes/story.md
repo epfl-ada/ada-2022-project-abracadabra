@@ -157,7 +157,7 @@ As we can see, one cluster is clearly has more news/politics channels, and the o
     </div>
 </figure>
 <p align="center">
-    <iframe style="width:80%;height:700px;" src="https://alpopesc.github.io/english_2/" title="english_2"></iframe>
+    <iframe style="width:80%;height:700px;" src="https://alpopesc.github.io/english_2/network" title="english_2_network"></iframe>
 </p>
 
 
