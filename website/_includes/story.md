@@ -1,6 +1,11 @@
-## Analysis
+<section id="analysis">
+<div class="col-lg-12 text-center">
+    <h2 class="section-heading">Analysis</h2>
+</div>
 
-### Trying to find similar channels
+
+<h4 class="section-heading">Trying to find similar channels</h4>
+
 
 Our first intuition was to take the aforementioned gaming and political channels and trying to find groups of YouTubers with similar commenters, regardless of the channel type. By doing this, if we found clusters containing both news/politics and gaming channels, we might have already found what we were looking for, as it would mean that some gaming YouTubers shared more viewers with some news or politics channels than to other gaming creators.
 

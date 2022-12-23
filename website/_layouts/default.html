@@ -8,7 +8,21 @@
 
     {% include header.html %}
     {% include intro.html %}
-    {% include results.html %}
+    
+
+    <div class="container">
+      <div class="row">
+      </div>
+      {% capture story %}{% include story.md %}{% endcapture %}
+      {{ story | markdownify }}
+      <p align="center">
+          <iframe style="width:80%;height:700px;" src="https://alpopesc.github.io/ADA_graph_1_2_cluster/" title="bibi"></iframe>
+      </p>
+      <p align="center">
+          Caption Bibaboup
+      </p>
+  </div>
+
     {% include conclusion.html %}
     {% include team.html %}
     {% include modals.html %}
