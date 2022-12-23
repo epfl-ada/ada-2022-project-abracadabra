@@ -2,7 +2,7 @@
 
 <section id="intro">
 <div class="row">
-<div class="col-lg-8 mx-auto">
+<div class="col-lg-12">
 <div class="text-center">
     <h2 class="section-heading">Introduction</h2>
 </div>
@@ -40,7 +40,7 @@ channels as well as the top 200 news/politics channels.
 <!-- Analysis Section -->
 <section id="analysis">
 <div class="row">
-<div class="col-lg-10 mx-auto">
+<div class="col-lg-12">
 <div class="text-center">
     <h2 class="section-heading">Analysis</h2>
 </div>
@@ -260,7 +260,7 @@ means that we cannot prove anything about the political lean of gaming YouTubers
 
 <section id="conclusion">
 <div class="row">
-<div class="col-lg-10 mx-auto">
+<div class="col-lg-12 mx-auto">
 <div class="text-center">
     <h2 class="section-heading">Conclusion</h2>
 </div>
