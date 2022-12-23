@@ -43,7 +43,7 @@ Our first intuition was to take the aforementioned gaming and political channels
 To do this, we looked at every commenter who left a comment on videos created by at least two of these channels. We then created a 400 by 400 matrix called the similarity matrix (depicted below). Each element of this matrix represents the number of commenters that left a comment on both channels. For example, the first row and column of the matrix represents PlayStation's shared commenters with every other channel. PewDiePie is represented by the fourth row and column, so if we look at the fourth element of the first row (or the first element of the first column), we will find how many people commented on both channels.
 </p>
 <figure>
-    <img alt="Similarity matrix" src="/img/mat_400_sim_matrix.PNG" style="width:60%; display: block; margin: 0 auto">
+    <img alt="Similarity matrix" src="{{ "/img/mat_400_sim_matrix.PNG" | prepend: site.baseurl }}" style="width:60%; display: block; margin: 0 auto">
     <div align="center" >Fig. 1 - Similarity matrix</div>
 </figure>
 &nbsp;
@@ -55,7 +55,7 @@ The normalized similarity matrix is thus given below :
 </p>
 
 <figure>
-    <img alt="Normalized Similarity Matrix" src="/img/norm_sim_mat_400.PNG" style="width:60%; display: block; margin: 0 auto">
+    <img alt="Normalized Similarity Matrix" src="{{ "/img/norm_sim_mat_400.PNG" | prepend: site.baseurl }}" style="width:60%; display: block; margin: 0 auto">
     <div align="center" >Fig. 2 - Normalized Similarity Matrix</div>
 </figure>
 &nbsp;
@@ -70,7 +70,7 @@ Let's look at theses disconnected channels :
 </p>
 
 <figure>
-    <img alt="Disconnected channels" src="/img/disconnected_channels.PNG" style="width:60%; display: block; margin: 0 auto">
+    <img alt="Disconnected channels" src="{{ "/img/disconnected_channels.PNG" | prepend: site.baseurl }}" style="width:60%; display: block; margin: 0 auto">
     <div align="center" >Fig. 3 - Disconnected channels</div>
 </figure>
 &nbsp;
@@ -103,7 +103,7 @@ As you can see below, the network makes two clear groups, which mostly correspon
     </div>
 </figure>
 <p align="center">
-    <iframe style="width:80%;height:700px;" src="https://alpopesc.github.io/ADA_graph_1_2_cluster/" title="bibi"></iframe>
+    <iframe style="width:80%;height:700px;" src="https://alpopesc.github.io/ADA_graph_1_2_cluster/" title="ADA_graph_1_2_cluster"></iframe>
 </p>
 
 <p>
@@ -134,7 +134,7 @@ Once these channels were filtered out, we recomputed a new normalised similarity
 </p>
 
 <figure>
-    <img alt="Kenyan news channels cluster" src="/img/kenyan_cluster.PNG" style="width:60%; display: block; margin: 0 auto">
+    <img alt="Kenyan news channels cluster" src="{{ "/img/kenyan_cluster.PNG" | prepend: site.baseurl }}" style="width:60%; display: block; margin: 0 auto">
     <div align="center" >Fig. 4 - Kenyan news channels cluster</div>
 </figure>
 <p>
@@ -144,7 +144,7 @@ At this point, we were quite annoyed, as we thought we might have to go through 
 Luckily, we didn't have to. We were left with 2 clusters, here are their statistics :
 </p>
 <figure>
-    <img alt="Cluster statistics" src="/img/stats_gaming_politics_clusters.PNG" style="width:60%; display: block; margin: 0 auto">
+    <img alt="Cluster statistics" src="{{ "/img/stats_gaming_politics_clusters.PNG" | prepend: site.baseurl }}" style="width:60%; display: block; margin: 0 auto">
     <div align="center" >Fig. 5 - Cluster statistics</div>
 </figure>
 <p>
@@ -157,7 +157,7 @@ As we can see, one cluster is clearly has more news/politics channels, and the o
     </div>
 </figure>
 <p align="center">
-    <iframe style="width:80%;height:700px;" src="https://alpopesc.github.io/english_2/" title="bibi"></iframe>
+    <iframe style="width:80%;height:700px;" src="https://alpopesc.github.io/english_2/" title="english_2"></iframe>
 </p>
 
 

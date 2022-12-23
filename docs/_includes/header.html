@@ -46,7 +46,7 @@
                 <style>
                 @font-face {
                     font-family: YTubeFont;
-                    src: url(/img/youtube-sans-medium.ttf);
+                    src: url({{ "/img/youtube-sans-medium.ttf" | prepend: site.baseurl }});
                 }    
                 div {
                     font-family: YTubeFont;
@@ -55,7 +55,7 @@
                 <div class="intro-lead-in">
                     
                     <div>
-                        <img class="logo" src="/img/smallyt.svg" style = "width:70px;height:400px;"/>
+                        <img class="logo" src="{{ "/img/smallyt.svg" | prepend: site.baseurl }}" style = "width:70px;height:400px;"/>
                         YouTube gaming content and political affiliation
                     </div>
                     
