@@ -1,4 +1,6 @@
 ﻿# An analysis of Youtube viewership to find links between preferred gaming content and political affiliation
+ 
+ Data story website : https://teal-pixie-cb7687.netlify.app/
 
 *In this project, we want to find communities in Youtube's gaming viewership, and look towards what side of the political spectrum each community tends to lean. By doing this, we may be able to determine if certain games attract more right/left wing viewers, and see if people's interests are linked to their political preferences. To do this, we will first classify news and political channels on a left-to-right political axis, then look at their shared viewership with gaming channels. We will then look if the viewers tend to watch news/political videos which have similar political ideas to determine if we can classify viewer's political preferences. We then cluster communities in the gaming space and see if their shared viewers have the same political leanings.*
  
